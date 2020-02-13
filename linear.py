@@ -21,11 +21,11 @@ from mxnet.gluon import nn
 #sequential类似一个容器，然后把一层层的网络堆叠在一起，这个有点类似keras
 net = nn.Sequential()
 #全连接层
-net.add(nn.Dense(1, in_units=3))
+net.add(nn.Dense(1, in_units=2))
 
 # 初始化模型参数
 from mxnet import init
-net.initialize(init.Normal(sigma=0.01), force_reinit=True)
+net.initialize(init.Normal(sigma=0.01))
 
 # 定义损失函数
 from mxnet.gluon import loss as gloss
